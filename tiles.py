@@ -6,21 +6,17 @@ class Tile(pygame.sprite.Sprite):
         self.image = spritesheet.parse_sprite(image)
         self.rect = self.image.get_rect()
 
-        # New offset try
-        iso_x = (2976/2 - 1536) 
-        iso_y = (2976 + 1536)/2
-        centered_x = x #2976/2 + iso_x
-        centered_y = y #1536/2/2 + iso_y
-
         # Get offsets
-        #x_offset = x #(2976 / 2) + (62 / 2 * (x + 1)) - (62 / 2 * (y + 1))
-        #y_offset = y #((y + 1) * 32) + (32 * x)
+        cart_x = x/2
+        cart_y = y
+        iso_x = (cart_x - cart_y)
+        iso_y = (cart_x + cart_y)/2
+        centered_x = x/(2**13) + iso_x + 2976/2
+        centered_y = y/(2**13) + iso_y
 
         # Set offsets for rect
         self.rect.x, self.rect.y = centered_x, centered_y
         
-        # Rotate image
-        #self.rotated_image = pygame.transform.rotate(self.image.convert_alpha(), 45)
 
     def draw(self, surface):
         surface.blit(self.image, (self.rect.x, self.rect.y))

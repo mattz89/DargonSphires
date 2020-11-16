@@ -37,11 +37,9 @@ while running:
 
 
     # Update window and display
-    canvas.fill((0, 180, 240))
+    #canvas.fill((0, 180, 240))
     map1.draw_map(canvas)
     # For when players added
     #canvas.blit(player_img, player_rect)
     window.blit(canvas, (0, 0))
     pygame.display.update()
-
-
