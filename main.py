@@ -20,7 +20,7 @@ players = SpriteSheet('players.png')
 
 
 # Load the map
-map1 = TileMap('map1.csv', tileset)
+map1 = TileMap('map1_tile.csv', tileset)
 # For when players added
 #player_rect.x, player_rect.y = map.start_x, map.start_y
 

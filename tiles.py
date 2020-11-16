@@ -7,10 +7,10 @@ class Tile(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
 
         # New offset try
-        iso_x = (2976 - 1536) 
+        iso_x = (2976/2 - 1536) 
         iso_y = (2976 + 1536)/2
-        centered_x = x #2976/2 + iso_x
-        centered_y = y #1536/2/2 + iso_y
+        centered_x = 2976/2 + iso_x
+        centered_y = 1536/2/2 + iso_y
 
         # Get offsets
         #x_offset = x #(2976 / 2) + (62 / 2 * (x + 1)) - (62 / 2 * (y + 1))
