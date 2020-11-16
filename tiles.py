@@ -11,7 +11,7 @@ class Tile(pygame.sprite.Sprite):
         cart_y = y
         iso_x = (cart_x - cart_y)
         iso_y = (cart_x + cart_y)/2
-        centered_x = x/(2**13) + iso_x + 2976/2
+        centered_x = x/(2**13) + iso_x + 1920/2
         centered_y = y/(2**13) + iso_y
 
         # Set offsets for rect
